@@ -21,7 +21,7 @@ import java.sql.Statement;
  * @author HP
  */
 public class InsertRecord {
-    static int  id_count=0; 
+     static int  id_count=0; 
     String first_name,last_name,country,city,course,department,college,university,Mastery_field,Phd_field;
      int year;
      static Connection conn=null;
@@ -83,7 +83,7 @@ public class InsertRecord {
 		
 		try{             
 			stmt = conn.createStatement(); 
-                        stmt.execute("SELECT * FROM UG");
+                        stmt.execute("SELECT * FROM PG");
                         rs = stmt.getResultSet();
                         rs.last();
                         id_count=rs.getRow();
@@ -129,7 +129,7 @@ public class InsertRecord {
 		
 		try{               
 			stmt = conn.createStatement();  
-                        stmt.execute("SELECT * FROM UG");
+                        stmt.execute("SELECT * FROM PG");
                         rs = stmt.getResultSet();
                         rs.last();
                         id_count=rs.getRow();
